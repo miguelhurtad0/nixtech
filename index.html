@@ -2,7 +2,7 @@
 <html>
   <head>
        <meta charset="UTF-8">
-      
+        <script src="https://www.google.com/recaptcha/api.js"></script>
 
   </head>
        <title>Formularios</title>
@@ -22,17 +22,24 @@
         <input type="password" name="password"></br/>
           Dirección<br>
         <input type="tex" name="Direccion" value="">
-        
+         <script>
+                 function onSubmit(token) {
+                   document.getElementById("demo-form").submit();
+                 }
+         </script>
       
-      
-
       <section>
           <h3>Subir Identificación en PDF</h3>
           <input type="file" accept=".pdf">
       </section><br>
-      <button type="submit">Enviar</button>
+            <button type="submit">Enviar</button>
+            <button class="g-recaptcha" 
+              data-sitekey="reCAPTCHA_site_key" 
+              data-callback='onSubmit' 
+              data-action='submit'>Submit
+            </button>
 
-    </section>
+      </section>
 </form>
   </body>
 </html>

@@ -2,7 +2,9 @@
 <html>
   <head>
        <meta charset="UTF-8">
+        <script src="https://www.google.com/recaptcha/api.js"></script>
        <script src="https://www.google.com/recaptcha/api.js?render=6Ldg0ioqAAAAACWu31LSarrSbqnzmEQczx0lEROr"></script>
+  
   </head>
        <title>Formularios</title>
   </head>
@@ -21,7 +23,14 @@
         <input type="password" name="password"></br/>
           Dirección<br>
         <input type="tex" name="Direccion" value="">
-           <script>
+           
+        
+             <script>
+                 function onSubmit(token) {
+                   document.getElementById("demo-form").submit();
+                 }
+              </script>
+          <script>
                 function onClick(e) {
                   e.preventDefault();
                   grecaptcha.ready(function() {
@@ -32,12 +41,6 @@
                 }
           </script>
           
-          
-          <script>
-                 function onSubmit(token) {
-                   document.getElementById("demo-form").submit();
-                 }
-         </script>
       
       <section>
           <h3>Subir Identificación en PDF</h3>

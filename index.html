@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <meta charset="UTF-8">
+       <script src="https://www.google.com/recaptcha/api.js"></script>
+
+  </head>
+       <title>Formularios</title>
+  </head>
+  
+  <body>
+    <h1>
+      Examen - Creación de formularios
+    </h1>
+    <section>
+        <form action="" method="">
+          Nombre y apellido<br/>
+        <input type="text" name="nombre" value="">
+          <br/>Correo<br>
+          <input type="text" name="mail" value=""><br>
+          Ingrese una contraseña <br/>
+        <input type="password" name="password"></br/>
+          Dirección<br>
+        <input type="tex" name="Direccion" value="">
+        
+      
+      
+
+      <section>
+          <h3>Subir Identificación en PDF</h3>
+          <input type="file" accept=".pdf">
+      </section><br>
+      <button type="submit">Enviar</button>
+      <button class="g-recaptcha"
+              data-sitekey="6LfXAikqAAAAAExW26bTEfNfgyLipoyPMAP0gdxZ"
+              data-callback='onSubmit'
+              data-action='submit'>
+      </button>
+      <script>
+        function onSubmit(token) {
+          document.getElementById("demo-form").submit();
+        }
+      </script>
+    </section>
+</form>
+  </body>
+</html>

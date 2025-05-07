@@ -1,58 +1,85 @@
 <!DOCTYPE html>
-<html>
-  <head>
-       <meta charset="UTF-8">
-       <script src="https://www.google.com/recaptcha/api.js?render=6Ldg0ioqAAAAACWu31LSarrSbqnzmEQczx0lEROr"></script>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIXTECH</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+ 
+  <header>
+    <img src="/img/logo.jpg" alt="NIXTECH logo" class="logo" />
+    <h1 class="fade-in">NIXTECH</h1>
+    <p class="fade-in delay1">Multiservicios Tecnológicos</p>
+  </header>
+
+  <section class="horizontal-gallery">
+    <img src="img/imagen1.jpg" alt="Imagen 1" class="gallery-img small">
+    <img src="img/imagen2.jpg" alt="Imagen 2" class="gallery-img large">
+    <img src="img/imagen3.jpg" alt="Imagen 3" class="gallery-img small">
+  </section>
   
-  </head>
-       <title>Formularios</title>
-  </head>
+  <section class="content">
+    <h2 class="fade-in delay2">¿Quienes Somos?</h2>
+    <p class="fade-in delay3">
+      En NIXTECH somos una empresa joven y dinámica dedicada a ofrecer soluciones tecnológicas accesibles, y prácticas personalizadas.
+    </p>
+
+    <h2 class="fade-in delay4">Nuestra Meta </h2>
+    <p class="fade-in delay5">
+      Ser líderes en soluciones tecnológicas integrales, accesibles y efectivas. 
+    </p>
+  </section>
+
+  <section class="services fade-in delay6">
+    <h2>Servicios</h2>
+    <div class="service">
+      <i class="fas fa-robot icon"></i>
+      <p>Automatización de chats</p>
+    </div>
+    <div class="service">
+      <i class="fas fa-globe icon"></i>
+      <p>Creación de páginas web</p>
+    </div>
+    <div class="service">
+      <i class="fas fa-file-word icon"></i>
+      <p>Servicios de ofimática</p>
+    </div>
+  </section>
+
+  <div class="redes">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=61575910294860&mibextid=ZbWKwL" target="_blank" class="red">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+    </a>
   
-  <body>
-    <h1>
-      Examen - Creación de formularios
-    </h1>
-    <section>
-        <form action="" method="">
-          Nombre y apellido<br/>
-        <input type="text" name="nombre" value="">
-          <br/>Correo<br>
-          <input type="text" name="mail" value=""><br>
-          Ingrese una contraseña <br/>
-        <input type="password" name="password"></br/>
-          Dirección<br>
-        <input type="tex" name="Direccion" value="">
-           
-        
-             <script>
-                 function onSubmit(token) {
-                   document.getElementById("demo-form").submit();
-                 }
-              </script>
-          <script>
-                function onClick(e) {
-                  e.preventDefault();
-                  grecaptcha.ready(function() {
-                    grecaptcha.execute('6Ldg0ioqAAAAACWu31LSarrSbqnzmEQczx0lEROr', {action: 'submit'}).then(function(token) {
-                        // Add your logic to submit to your backend server here.
-                    });
-                  });
-                }
-          </script>
-          
-      
-      <section>
-          <h3>Subir Identificación en PDF</h3>
-          <input type="file" accept=".pdf">
-      </section><br>
-           
-            <button class="g-recaptcha" 
-              data-sitekey="reCAPTCHA_site_key" 
-              data-callback='onSubmit' 
-              data-action='submit'>Submit
-            </button>
-            <button type="submit">Enviar</button>
-      </section>
-</form>
-  </body>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/50558540116" target="_blank" class="red">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+    </a>
+  
+    <!-- Gmail -->
+    <a href="mailto:nixtech@gmail.com" class="red">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail" />
+    </a>
+  </div>
+  
+
+  <section class="contact">
+    <h2>Contacto</h2>
+    <form action="#" method="post">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu correo electrónico" required />
+      <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 NIXTECH® - Todos los derechos reservados</p>
+  </footer>
+</body>
 </html>
